@@ -22,19 +22,20 @@ app_3 TEXT,
 app_3_desc TEXT,
 linked_in TEXT,
 blog TEXT,
-twitter TEXT,
-github TEXT,
+twitter_url TEXT,
+github_url TEXT,
 code_school TEXT,
 coder_wall TEXT,
 stack_overflow TEXT,
 treehouse TEXT,
-githubfeed TEXT,
 twitterfeed TEXT,
 tagline2 TEXT,
 image_url TEXT,
 page_link TEXT,
 excerpt TEXT,
-profile_photo TEXT
+profile_photo TEXT,
+twitter_username TEXT,
+github_username TEXT
 );
 SQL
 
@@ -105,15 +106,17 @@ profile_links.each do |link|
     bio = doc.css('.two_third > p').text
     linked_in = doc.css('.linkedin a')[0]["href"]
     blog = doc.css('.blog a')[0]["href"]
-    twitter = doc.css('.twitter a')[0]["href"]
-    github = doc.css('a[href*="github"]')[0]["href"]
+    twitter_url = doc.css('.twitter a')[0]["href"]
+    github_url = doc.css('a[href*="github"]')[0]["href"]
     code_school = doc.css('a[href*="codeschool"]')[0]["href"]
     coder_wall = doc.css('a[href*="coderwall"]')[0]["href"]
     stack_overflow = doc.css('a[href*="stack"]')[0]["href"]
     treehouse = doc.css('a[href*="treehouse"]')[0]["href"]
-    githubfeed = doc.css('.one_half')[0].inner_html
     twitterfeed_selector = doc.css('a.twitter-timeline')[0]
     twitterfeed = twitterfeed_selector["data-widget-id"] if twitterfeed_selector
+    twitter_url.match(".com\/(.+)")
+    twitter_username = $1
+    github_username = github_url.split(/\.|\//).select{|item| !item.empty? && item !~ /github|http|\Acom\Z/}.first
 
     my_css = css.css("p")[0].text.match(/.#{image_class}\s*{(\s|.)*?}/)
     my_css.to_s.match(/\.\.(.*)?\)/)
@@ -131,15 +134,16 @@ profile_links.each do |link|
       app_3_desc = :app_3_desc,
       linked_in = :linked_in,
       blog = :blog,
-      twitter = :twitter,
-      github = :github,
+      twitter_url = :twitter_url,
+      github_url = :github_url,
       code_school = :code_school,
       coder_wall = :coder_wall,
       stack_overflow = :stack_overflow,
       treehouse = :treehouse,
-      githubfeed = :githubfeed,
       twitterfeed = :twitterfeed,
-      profile_photo = :profile_photo WHERE last_name = :last_name")
+      profile_photo = :profile_photo,
+      twitter_username = :twitter_username,
+      github_username = :github_username WHERE last_name = :last_name")
 
     ps.execute('image_class' => image_class,
     'email' => email,
@@ -153,16 +157,17 @@ profile_links.each do |link|
     'app_3_desc' => app_3_desc,
     'linked_in' => linked_in,
     'blog' => blog,
-    'twitter' => twitter,
-    'github' => github,
+    'twitter_url' => twitter_url,
+    'github_url' => github_url,
     'code_school' => code_school,
     'coder_wall' => coder_wall,
     'stack_overflow' => stack_overflow,
     'treehouse' => treehouse,
-    'githubfeed' => githubfeed,
     'twitterfeed' => twitterfeed,
     'last_name' => last_name,
-    'profile_photo' => profile_photo)
+    'profile_photo' => profile_photo,
+    'twitter_username' => twitter_username,
+    'github_username' => github_username)
 
     ps.close
 end

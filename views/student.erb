@@ -82,7 +82,7 @@
               <a href="<%= @student.linked_in %>">LinkedIn</a>
             </li>
             <li class="twitter">
-              <a href="<%= @student.twitter %>">Twitter</a>
+              <a href="<%= @student.twitter_url %>">Twitter</a>
             </li>
           </ul>
         </nav> <!-- this is the end of side nav -->
@@ -115,7 +115,7 @@
         <div class="columns" style="padding-left: 22px;">
           <div class="coder-cred">
             <div class="one_fifth">
-              <a href="<%= @student.github %>">
+              <a href="<%= @student.github_url %>">
                 <div class="cred-github"></div>
               </a>
             </div>
@@ -145,15 +145,14 @@
         <h2 class="title"><span>Social Nerdery</span></h2>
           <div class="one_half">
             <h2> Github Feed</h2>
-            <% username = @student.github.split('github.com/')[1] %>
-            <script language="JavaScript" src="http://itde.vccs.edu/rss2js/feed2js.php?src=https%3A%2F%2Fgithub.com%2F<%= username %>.atom&chan=n&num=5&desc=1&date=n&targ=y" type="text/javascript"></script>
+            <script language="JavaScript" src="http://itde.vccs.edu/rss2js/feed2js.php?src=https%3A%2F%2Fgithub.com%2F<%= @student.github_username %>.atom&chan=n&num=5&desc=1&date=n&targ=y" type="text/javascript"></script>
             <noscript>
             <a href="http://itde.vccs.edu/rss2js/feed2js.php?src=https%3A%2F%2Fgithub.com%2Fcreekace.atom&chan=n&num=5&desc=1&date=n&targ=y&html=y">View RSS feed</a>
             </noscript>
         </div>
         <div class="one_half last">
-          <% if @student.twitter && @student.twitterfeed %>
-            <a class="twitter-timeline" href="<%= @student.twitter %>" data-widget-id="<%= @student.twitterfeed %>">Tweets by @<%= @student.twitter.match(".com\/(.+)")[1] if @student.twitter.match(".com\/(.+)") %></a>
+          <% if @student.twitter_url && @student.twitterfeed %>
+            <a class="twitter-timeline" href="<%= @student.twitter_url %>" data-widget-id="<%= @student.twitterfeed %>">Tweets by @<%= @student.twitter_username %></a>
             <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
           <% end %>
         </div>
