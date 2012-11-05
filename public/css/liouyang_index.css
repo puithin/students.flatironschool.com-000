@@ -1,0 +1,17 @@
+h1 {
+	font-size: 3em;
+}
+
+div#right_col{
+	width: 212px;
+}
+
+div#right_col img {
+	border: 6px solid #403051;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+img.person {
+	width: 60px;
+}

@@ -1,0 +1,138 @@
+h2#tagline {
+	border-bottom: solid 2px gray; 
+}
+
+#side-nav {
+	padding: 50px;
+}
+
+#side-nav li a {
+	display: block;
+	background: url('../images/Link-Nav-Sprite.png');
+	width: 51px;
+	height: 51px;
+	margin: 15px;
+
+/*Scott Kellum Img Replace Hack*/
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-transition-duration: 0s;
+	-webkit-transition-timing-function: none;
+}
+
+#side-nav li.twitter a{
+	background-position: -85px -80px;
+
+}
+
+#side-nav li.twitter a:hover {
+	background-position: -83px -17px;
+
+}
+
+#side-nav li.facebook a{
+	background-position: -321px -75px;
+	width: 53px;
+	height: 52px;
+
+}
+
+#side-nav li.facebook a:hover {
+	background-position: -323px -16px;
+	width: 52px;
+	height: 51px;
+
+}
+
+#side-nav li.github a{
+	background-position: -19px -82px;
+	width: 51px;
+	height: 51px;
+
+}
+
+#side-nav li.github a:hover {
+	background-position: -19px -17px;
+	width: 51px;
+	height: 51px;
+
+}
+
+#side-nav li.linkedin a{
+	background-position: -200px -85px;
+	width: 46px;
+	height: 42px;
+
+}
+
+#side-nav li.linkedin a:hover {
+	background-position: -200px -20px;
+	width: 46px;
+	height: 42px;
+
+}
+
+#side-nav li.stack a{
+	background-position: -145px -79px;
+	width: 41px;
+	height: 48px;
+
+}
+
+#side-nav li.stack a:hover {
+	background-position: -145px -15px;
+	width: 41px;
+	height: 48px;
+
+}
+
+#side-nav li.blog a{
+	background-position: -257px -76px;
+	width: 57px;
+	height: 55px;
+
+}
+
+#side-nav li.blog a:hover {
+	background-position: -257px -17px;
+	width: 57px;
+	height: 55px;
+
+}
+
+#navcontainer {
+	width: 200px;
+}
+
+div.jrcolumns {
+	width: 900px;
+	margin: 0 auto;
+	float: none;
+
+}
+
+div#right_col{
+	width: 200px;
+	padding: 25px;
+}
+
+div#right_col img {
+	border: 6px solid #403051;
+	border-radius: 5px;
+	margin: 0 auto;
+}
+
+img.person {
+	width: 60px;
+}
+
+
+
+
+
+
+
+
+
+

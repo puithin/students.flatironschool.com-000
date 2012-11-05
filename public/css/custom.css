@@ -1,0 +1,43 @@
+/* Test CSS */
+ul.icon-links {
+  list-style-type: none;
+}
+
+ul.icon-links li img {
+  margin-right: 10px;
+}
+
+blockquote{
+	text-indent:-0.4em;
+	margin-left:0.4em;
+	font-family:Georgia,"Times New Roman",Times,serif;
+	font-style:italic;
+	font-size:18px;
+	padding: 20px 20px 20px 20px;
+}
+
+blockquote img{
+	width: 10%;
+	height: 10%;
+}
+
+.columns {
+  border-bottom:5px solid #f4f4f4;
+}
+
+.title{ background:url(../images/stripe_bg.gif) repeat-x center left; font-size:1.1em; text-align:center; width:100%;  color:#5f5f5f; margin-bottom:2em}
+.title span{ background:#fff; padding:0 20px; font-family:"PodkovaRegular", Times, serif; text-transform:uppercase;}
+
+#indent_text {
+	text-indent:50px;
+}
+
+/*--------------------------
+COLUMNS
+---------------------------*/
+.one_half{width:48.5%}
+.one_half {position:relative; margin-right:3%; float:left; margin-bottom:2.25em}
+.last{margin-right:0 !important; clear:right;}
+.columns {
+	border-bottom: 5px solid #f4f4f4;
+}

@@ -1,0 +1,166 @@
+h2#tagline {
+	border-bottom: solid 2px gray; 
+}
+
+#side-nav {
+	padding-left: 45px;
+	padding-top: 5px;
+}
+
+#side-nav li a {
+	display: block;
+	background: url('../images/matz-social-icons.png');
+	width: 50px;
+	height: 50px;
+	margin: 16px;
+
+/*Scott Kellum Img Replace Hack*/
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	-webkit-transition-duration: 0s;
+	-webkit-transition-timing-function: none;
+}
+
+#side-nav li.email a {
+	background: url('../images/matz-social-icons.png') no-repeat -4px -8px;
+	width: 50px;
+	height: 50px;
+}
+
+#side-nav li.blog a {
+	background: url('../images/matz-social-icons.png') no-repeat -4px -75px;
+}
+
+#side-nav li.linkedin a {
+	background: url('../images/matz-social-icons.png') no-repeat -3px -142px;
+}
+
+#side-nav li.twitter a {
+	background: url('../images/matz-social-icons.png') no-repeat -4px -209px;
+	width: 51px;
+	height: 50px;
+}
+
+
+#side-nav li.email a:hover,
+#side-nav li.blog a:hover,
+#side-nav li.linkedin a:hover,
+#side-nav li.twitter a:hover {
+	opacity: 0.8;
+}
+
+
+
+
+#navcontainer {
+	width: 200px;
+}
+
+div.jrcolumns {
+	width: 900px;
+	margin: 0 auto;
+	float: none;
+
+}
+
+div#right_col{
+	width: 200px;
+	padding: 25px;
+}
+
+
+img.person {
+	width: 60px;
+}
+
+.profile-photo img{
+	height: 200px;
+	width: 200px;
+	overflow: hidden;
+	padding: 0;
+	-moz-border-radius: 100px;
+	-webkit-border-radius: 100px;
+	border-radius: 100px;
+}
+
+div.mcnamee-profile-photo {   
+height: 200px;
+width: 200px;
+background: url(../images/kevin_mcnamee.png) no-repeat -2px -2px;
+
+}
+
+.matz-profile-photo {   
+height: 200px;
+width: 200px;
+background: url(../images/matz-profile.jpg) no-repeat -20px -55px;
+
+}
+div.matz-profile-photo img { margin:0; padding: 0; }
+
+
+.cred-github {
+	background: url('../images/teamj-coder-cred.png') no-repeat -8px -8px;
+	width: 140px;
+	height: 140px;
+	filter: none;
+    -webkit-filter: grayscale(1);
+}
+.cred-github:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+
+.cred-codeschool {
+	background: url('../images/teamj-coder-cred.png') no-repeat -172px -8px;
+	width: 141px;
+	height: 140px;
+	filter: none;
+    -webkit-filter: grayscale(1);
+}
+.cred-codeschool:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+
+.cred-coderwall {
+	background: url('../images/teamj-coder-cred.png') no-repeat -337px -8px;
+	width: 140px;
+	height: 140px;
+	filter: none;
+    -webkit-filter: grayscale(1);
+}
+.cred-coderwall:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+
+.cred-stackoverflow {
+	background: url('../images/teamj-coder-cred.png') no-repeat -500px -8px;
+	width: 141px;
+	height: 140px;
+	filter: none;
+    -webkit-filter: grayscale(1);
+}
+.cred-stackoverflow:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
+
+.cred-treehouse {
+	background: url('../images/teamj-coder-cred.png') no-repeat -665px -8px;
+	width: 140px;
+	height: 140px;
+	filter: none;
+    -webkit-filter: grayscale(1);
+}  
+.cred-treehouse:hover {
+    filter: none;
+    -webkit-filter: grayscale(0);
+}
+
