@@ -24,6 +24,16 @@ class Student
       student
     end
 
+    def self.find_by_slug(slug)
+      student = Student.new
+      @db.results_as_hash = true
+      result = @db.execute("SELECT * FROM students WHERE slug = '#{slug.downcase}'")[0]
+      @@attributes.each do |attribute|
+        student.send("#{attribute}=", result[attribute.to_s])
+      end
+      student
+    end
+
     def self.all
       students = []
       student_info = @db.execute("SELECT * FROM students")
