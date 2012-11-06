@@ -35,7 +35,8 @@ page_link TEXT,
 excerpt TEXT,
 profile_photo TEXT,
 twitter_username TEXT,
-github_username TEXT
+github_username TEXT,
+slug TEXT
 );
 SQL
 
@@ -88,6 +89,7 @@ profile_links.each do |link|
     first_name = name[0]
     last_name = name[1]
 
+    slug = "#{first_name.downcase}#{last_name.downcase}"
     image_class = doc.css('div#navcontainer.one_third div')[0]['class']
 
     app_1 = doc.css('h4')[0].text
@@ -143,7 +145,8 @@ profile_links.each do |link|
       twitterfeed = :twitterfeed,
       profile_photo = :profile_photo,
       twitter_username = :twitter_username,
-      github_username = :github_username WHERE last_name = :last_name")
+      github_username = :github_username,
+      slug = :slug WHERE last_name = :last_name")
 
     ps.execute('image_class' => image_class,
     'email' => email,
@@ -167,7 +170,8 @@ profile_links.each do |link|
     'last_name' => last_name,
     'profile_photo' => profile_photo,
     'twitter_username' => twitter_username,
-    'github_username' => github_username)
+    'github_username' => github_username,
+    'slug' => slug)
 
     ps.close
 end

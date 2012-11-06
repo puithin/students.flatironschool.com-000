@@ -7,10 +7,8 @@ get "/" do
 	erb :index
 end
 
-get "/:id" do |id|
-	if (id.to_i > 0)
-		@student = Student.find(id.to_i)
-	end
+get "/:user" do |user|
+	@student = Student.find_by_slug(user)
 
 	if (@student.nil?)
 		#redirect somewhere
