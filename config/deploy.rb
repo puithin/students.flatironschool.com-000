@@ -1,7 +1,7 @@
 # require "bundler/capistrano"
 
 set :application, "student_cms"
-set :repository,  "https://github.com/stephenchen13/students.flatironschool.com-000.git"
+set :repository,  "git@github.com:flatiron-school/students.flatironschool.com-000.git"
 
 set :user, 'schen'
 set :deploy_to, "/home/#{user}/#{application}"
